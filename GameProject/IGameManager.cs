@@ -9,7 +9,7 @@ namespace GameProject
     internal interface IGameManager
     {
         void Add(Gamer gamer, Games games);
-        void Update(Games games);
+        void Update(Gamer gamer, Games games);
         void Delete( Games games);
     }
 }

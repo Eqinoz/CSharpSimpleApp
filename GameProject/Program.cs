@@ -32,6 +32,7 @@ namespace GameProject
             };
 
             Console.WriteLine("-----Satın Almak İstediğiniz Oyunu Seçiniz------");
+            Console.WriteLine("****Kampanya 3 Oyun Alımında %25 İndirim****");
             foreach (var game in games)
             {
                 Console.WriteLine(game.Id+" " +"Oyun Adı: " + game.GameName + " Oyun Türü: " + game.GameType + " Oyun Fiyatı: " + game.GamePrice);
@@ -64,13 +65,15 @@ namespace GameProject
                 {
                     if (secim == game.Id)
                     {
-                        gameManager.Update(game);
+                        gameManager.Update(gamer, game);
                     }
                 }
                 Console.WriteLine("Alışverişe Devam Etmek İster Misiniz? (E/H)");
                  devam = Console.ReadLine();
 
             } while (devam == "E" || devam=="e");
+            Console.WriteLine("Alışverişiniz Tamamlanmıştır. İyi Oyunlar.");
+            Console.ReadKey();
 
 
 
